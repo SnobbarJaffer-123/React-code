@@ -1,3 +1,4 @@
+{/*use of hooks*/}
 import { useState } from "react";
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
 
     return (
       <>
-      <h1> Allah hu Akbar:{counter1}</h1>
+      <h1 > Allah hu Akbar:{counter1}</h1>
       <br />
       <h1> Alhumdulillah:{counter2}</h1>
       <br />
