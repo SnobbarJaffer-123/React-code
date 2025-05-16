@@ -7,6 +7,8 @@ const Profile: React.FC = () => {
 
   const { user } = context;
 
+ 
+
   return user ? (
     <div className="text-center">
       <p className="text-lg font-medium text-gray-700">

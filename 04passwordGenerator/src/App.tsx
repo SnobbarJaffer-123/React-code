@@ -14,6 +14,8 @@ function App() {
 
   //useRef hook
   const passwordRef=useRef(null)
+  //const passwordRef: React.RefObject<null>
+  //var window: Window & typeof globalThis
 
 
   const passwordGenerator=useCallback(()=>{
@@ -43,19 +45,24 @@ function App() {
     */}
 
     const copyPasswordToClipBoaed = useCallback(() => {
+      //passwordRef.current?<div className="select()"></div>
+     // passwordRef.current?<div className="setSelectionRange(0,9)"></div>
+
       window.navigator.clipboard.writeText(Password).then(() => {
         setCopied(true);
         setTimeout(() => setCopied(false), 1500); // back to "Copy" after 1.5s
       });
     }, [Password]);
     
-    
+    //useEffect runs when page loads and when any of the dependencies changes
   useEffect(()=>{passwordGenerator()},[length,numAllowed,charAllowed,passwordGenerator]
+
+
 )
   
   return (
     <>
-      <div className='w-full max-w-md mx-auto shadow-md rounded-lgpx-4 py-3 my-8 bg-gray-800 text-orange-500'>
+      <div className='items-center w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
       <h1 className='text-4xl  text-center text-white my-3'>Password Generator</h1>
        <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-14 py-10 my-8 text-orange-500 bg-gray-800'>
        <div className='flex shadow rounded-lg overflow-hidden mb-4'>

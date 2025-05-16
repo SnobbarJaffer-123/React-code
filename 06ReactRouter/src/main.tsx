@@ -11,6 +11,7 @@ import Contact from './components/Contact/Contact'
 import User from './components/User/User.js'
 import Github, { githubInfoLoader } from './components/Github/Github'
 
+
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
