@@ -1,4 +1,12 @@
 //import React from 'react'
+import { ButtonHTMLAttributes, ReactNode } from "react";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  bgColor?: string;
+  textColor?: string;
+  className?: string;
+}
 
 
 
@@ -10,7 +18,7 @@ function Button(
         textColor="text-white",
         className="",
         ...props
-    }) {
+    }:ButtonProps) {
  
 
     return (
