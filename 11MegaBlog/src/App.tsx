@@ -33,8 +33,8 @@ function App() {
       <div className='min-h-screen px-10 flex flex-wrap content-between bg-gray-400'>
         <div className='w-full block'>
           <Header/>
-          <main>
-            TODO<Outlet/>
+          <main className="min-h-screen">
+            <Outlet/>
           </main>
           <Footer/>
         </div>
@@ -43,13 +43,7 @@ function App() {
 
  
 
-  return (
-    <>
-
-      <h1 className='bg-green-200 text-black p-4 rounded-xl'>snobbar</h1>
-      
-    </>
-  )
+  
 }
 
 export default App

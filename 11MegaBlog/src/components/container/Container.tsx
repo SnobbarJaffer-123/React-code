@@ -1,4 +1,10 @@
-function Container({children}){
+import { ReactNode } from 'react';
+
+type Props = {
+  children: ReactNode;
+};
+
+function Container({children}:Props){
     return <div className="w-full max-w-7xl mx-auto px-4">{children}</div>;
 
 }
