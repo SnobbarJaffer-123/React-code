@@ -10,7 +10,7 @@ import { Pencil, Trash2, Save } from 'lucide-react';
 interface Todo {
   id: string;
   text: string;
-   completed: boolean;
+   //completed: boolean;
 }
 
 const Todos: React.FC = () => {

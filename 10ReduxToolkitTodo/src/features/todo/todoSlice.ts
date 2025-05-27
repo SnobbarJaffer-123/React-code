@@ -3,13 +3,18 @@
 // In features/todo/todoSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface Todo {
-  id: string;
-  text: string;
-}
+//interface Todo {
+//  id: string;
+//  text: string;
+//}
 
 interface TodoState {
   todos: Todo[];
+}
+export interface Todo {
+  id: string;
+  text: string;
+  
 }
 
 const initialState: TodoState = {
@@ -40,3 +45,4 @@ const todoSlice = createSlice({
 
 export const { addTodo, removeTodo, updateTodo, setTodos } = todoSlice.actions;
 export default todoSlice.reducer;
+

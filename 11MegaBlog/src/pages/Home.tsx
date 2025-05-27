@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react'
 import appwriteService from "../appwrite/config";
-import {Container, PostCard} from '../components'
+import {Container} from '../components'
+import {PostCard} from '../components'
+ 
 
 interface Post {
   $id: string;
