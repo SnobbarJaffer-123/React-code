@@ -1,5 +1,5 @@
 import conf from '../conf/conf';
-import { Client, ID, Databases, Storage, Query, Models } from 'appwrite';
+import { Client, ID, Databases, Storage, Query, Models,Account } from 'appwrite';
 
 interface PostData {
   title: string;
@@ -16,6 +16,7 @@ export class Service {
   private client: Client;
   private databases: Databases;
   private bucket: Storage;
+   private account: Account; 
 
   constructor() {
     this.client = new Client()
@@ -24,6 +25,16 @@ export class Service {
 
     this.databases = new Databases(this.client);
     this.bucket = new Storage(this.client);
+    this.account = new Account(this.client);
+  }
+
+   // ✅ ADD this method
+  async logout(): Promise<void> {
+    try {
+      await this.account.deleteSession("current");
+    } catch (error) {
+      console.error('Appwrite service :: logout :: error', error);
+    }
   }
 
   async createPost({
@@ -46,9 +57,8 @@ export class Service {
     }
   }
 
-  async updatePost({
+  async updatePost(slug:string,{
     title,
-    slug,
     content,
     featuredImage,
     status

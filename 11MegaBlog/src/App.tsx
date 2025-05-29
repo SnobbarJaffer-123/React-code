@@ -33,7 +33,7 @@ function App() {
       <div className='min-h-screen px-10 flex flex-wrap content-between bg-gray-400'>
         <div className='w-full block'>
           <Header/>
-          <main className="min-h-screen">
+          <main className="min-h-screen ">
             <Outlet/>
           </main>
           <Footer/>
